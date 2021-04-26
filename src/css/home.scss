@@ -1,3 +1,11 @@
-/* Page load animation */
+.home-once {
+  opacity: 0;
+}
 
-/* Slide to home */
+.home-once-active {
+  transition: opacity 1s linear;
+}
+
+.home-once-to {
+  opacity: 1;
+}
