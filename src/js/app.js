@@ -13,10 +13,13 @@ barba.init({
   transitions: [
     {
       name: "home",
-      beforeOnce() {
-        console.log("if we need to fire some script");
+      to: {
+        namespace: ["home"],
       },
+      sync: true,
       once() {},
+      leave() {},
+      enter() {},
     },
     {
       name: "fade",
@@ -31,6 +34,14 @@ barba.init({
       sync: true,
       to: {
         namespace: ["clip"],
+      },
+      leave() {},
+      enter() {},
+    },
+    {
+      name: "with-cover",
+      to: {
+        namespace: ["with-cover"],
       },
       leave() {},
       enter() {},
